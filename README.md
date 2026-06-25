@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-IDS-red)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 # 🛡️ Intrusion Detection System (IDS)
 
 A Python-based Intrusion Detection System that monitors system activity, detects suspicious behavior, logs security events, and generates alerts for potential intrusions.
@@ -9,6 +13,21 @@ A Python-based Intrusion Detection System that monitors system activity, detects
 This project demonstrates the implementation of a lightweight Intrusion Detection System (IDS) using Python. It continuously monitors predefined events, identifies suspicious activities based on configurable rules, and records alerts for security analysis.
 
 ---
+##Project architecture
+
+main.py
+    │
+    ▼
+detector.py
+    │
+    ▼
+config.py
+    │
+    ▼
+logger.py
+    │
+    ▼
+alerts.log
 
 ## ✨ Features
 
@@ -97,12 +116,26 @@ The application will monitor events and generate alerts whenever suspicious acti
 
 ## 🔄 Workflow
 
-1. Start the application.
-2. Monitor incoming events.
-3. Analyze activity using detection rules.
-4. Identify suspicious behavior.
-5. Record events in the log.
-6. Generate alerts for detected intrusions.
+Incoming Event
+      │
+      ▼
+ Event Monitoring
+      │
+      ▼
+ Rule-Based Detection
+      │
+      ▼
+ Suspicious Activity?
+      │
+ ┌────┴─────┐
+ │          │
+No         Yes
+ │          │
+ ▼          ▼
+Continue   Log Event
+            │
+            ▼
+      Generate Alert
 
 ---
 
